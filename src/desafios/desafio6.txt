@@ -1,2 +1,0 @@
-A:itemListContainer con productos e informacion 
-B:crear el componente ItemDetail.js para mostrar la vista del detalle del item seleccionado para mostrar imagen titulo desxripcion

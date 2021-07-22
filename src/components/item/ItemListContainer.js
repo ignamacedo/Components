@@ -11,10 +11,21 @@ const ItemListContainer = (props) => {
     },[]);
   
     return(
-      <>
-        <h1>{props.greeting}</h1>
-        <Item items={items}/>
-      </>
+    <>
+      <h1>{props.greeting}</h1>
+
+      <div class="container-fluid">
+        <div className="row">
+          {(items.lenght === 0) ? 
+            <p>LOADING....</p>
+            :
+            items.map((item,index) => (
+              <Item item={item}/>
+            ))
+            }
+        </div>
+      </div>
+    </>
     );
 }
 

@@ -1,36 +1,13 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
 
-function ItemCount({stock, initial}){
-   
-    const stockInit = stock;
-    const [select, setSelect] = useState(initial);
-    const [stockDin, setStockDin] = useState(stock);
-
-    const onAdd = () =>{
-        if(select < stockInit){
-            setSelect(select + 1);
-            setStockDin(stockDin - 1);
-        }
-    }
-
-    const onRemove = () =>{
-        if(select > 0){
-            setSelect(select - 1);
-            setStockDin(stockDin + 1);
-        }
-    }
-
+function ItemCount({stock, initial, onAdd, onRemove}){
     return(
         <div>
             <form>
-                <input type='number' class='form-control' style={{width:'50%',textAlign:'center'}} disabled value={select}/>
-                <button disbaled className='btn btn-secondary' type='button' onClick={() => {
-                    onRemove()
-                }}> - </button>
-                <button className='btn btn-secondary' type='button' onClick={() => {
-                    onAdd()
-                }}> + </button>
+                <input type='number' class='form-control' style={{width:'40%',textAlign:'center'}} disabled value={initial}/>
+                <input type='text' class='form-control' style={{width:'40%',textAlign:'center'}} disabled value={'Stock : '+stock}/>
+                <button disbaled className='btn btn-secondary' type='button' onClick={() => {onRemove()}}> - </button>
+                <button className='btn btn-secondary' type='button' onClick={()=>{onAdd()}}> + </button>
                 <button className='btn btn-primary' type='submit'>Agregar al carrito</button>
             </form>
         </div>
