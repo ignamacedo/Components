@@ -1,11 +1,2 @@
 A:itemListContainer con productos e informacion 
 B:crear el componente ItemDetail.js para mostrar la vista del detalle del item seleccionado para mostrar imagen titulo desxripcion
-
-correccion:
-Hola Nacho!
-
-Lo que tenes que hacer es algo muy similar al desafío anterior de catalogo, pero en este caso, en la promise solo resolverías un solo item.
-
-Es decir, que vas a necesitar hacer una nueva promise y además tener un componente ItemDetailContainer y otro componente ItemDetail que va a mostrar la información que reciba desde el contenedor.
-
-Cualquier cosa, estamos hablando
